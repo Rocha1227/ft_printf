@@ -1,11 +1,23 @@
-int	printf(const char *amat, ...);
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: krocha <krocha@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/06/02 17:01:53 by krocha            #+#    #+#             */
+/*   Updated: 2023/06/02 17:11:02 by krocha           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
+#include "ft_prinft.h"
+
+int	printf(const char *str, ...);
 
 //print a caracter - %c
 
-int	ft_printfchar(char c )
-{
-	write(1, &c, 1);	
-}
+ft_putchar()
 
 //print a string - %s
 
