@@ -15,6 +15,9 @@
 
 #include "libft/libft.h"
 
-
+int	ft_putstr(char *c);
+int	ft_putnbr(int n);
+int	ft_put_hexa_lower(unsigned int n);
+int	ft_put_hexa_upper(unsigned int n);
 
 #endif
