@@ -1,18 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: krocha <krocha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/15 12:53:06 by krocha            #+#    #+#             */
-/*   Updated: 2023/05/15 15:02:24 by krocha           ###   ########.fr       */
+/*   Created: 2023/06/05 12:26:41 by krocha            #+#    #+#             */
+/*   Updated: 2023/06/05 15:00:13 by krocha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "ft_printf.h"
 
-void	ft_putchar_fd(char c, int fd)
+char	ft_putchar(char c)
 {
-	write(fd, &c, 1);
+	write(1, &c, 1);
+	return (1);
 }

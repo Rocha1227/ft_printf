@@ -1,57 +1,56 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putpointer.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: krocha <krocha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/05 12:08:31 by krocha            #+#    #+#             */
-/*   Updated: 2023/06/05 15:01:28 by krocha           ###   ########.fr       */
+/*   Created: 2023/06/05 14:26:28 by krocha            #+#    #+#             */
+/*   Updated: 2023/06/05 15:03:57 by krocha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr(int n)
+int	ft_hexa_base_pointer(uintptr_t ptr)
 {
-	long long int	nb;
-	int				a;
+	char	*base16;
+	int		a;
 
 	a = 0;
-	nb = n;
-	if (nb < 0)
+	base16 = "0123456789abcdef";
+	a += ft_putchar(base16[ptr]);
+	return (a);
+}
+
+int	ft_print_ptr(uintptr_t ptr)
+{
+	int	a;
+
+	a = 0;
+	if (ptr >= 16)
 	{
-		a++;
-		ft_putchar('-');
-		nb *= -1;
+		a += ft_print_ptr(ptr / 16);
+		a += ft_print_ptr(ptr % 16);
 	}
-	if (nb >= 10)
+	if (ptr <= 15)
 	{
-		a += ft_putnbr(nb / 10);
-		a += ft_putnbr(nb % 10);
-	}
-	if (nb <= 9)
-	{
-		a += ft_putchar(nb + '0');
+		a += ft_hexa_base_pointer(ptr);
 	}
 	return (a);
 }
 
-int	ft_putnbr_uns(int n)
+int	ft_put_pointer(unsigned long long int ptr)
 {
-	unsigned int	nb;
-	int				a;
+	int	a;
 
+	if (!ptr)
+	{
+		ft_putstr("nill");
+		return (5);
+	}
 	a = 0;
-	nb = n;
-	if (nb >= 10)
-	{
-		a += ft_putnbr(nb / 10);
-		a += ft_putnbr(nb % 10);
-	}
-	if (nb <= 9)
-	{
-		a += ft_putchar(nb + '0');
-	}
+	a += ft_putstr("0x");
+	a += ft_print_ptr(ptr);
 	return (a);
 }
