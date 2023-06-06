@@ -28,4 +28,5 @@ int		ft_put_pointer(unsigned long long int ptr);
 int		ft_print_ptr(uintptr_t ptr);
 int		ft_hexa_base_pointer(uintptr_t ptr);
 int		ft_putnbr_uns(int n);
+int		ft_printf(const char *str, ...);
 #endif

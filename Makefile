@@ -15,33 +15,32 @@ CFLAGS = -Wall -Wextra -Werror
 #command to remove compiled files
 RM = rm -rf
 #command to create library from objects
-ARCH = ar rc
+ARCH = ar rcs
 #target name
 NAME = libftprintf.a
 #libft library
-LIBFT = libft/libft.a
-LIBFTDIR = libft
-#source files
-SRCS = ft_printf.c ft_puthexa.c ft_putnbr.c ft_putstr.c ft_putchar.c ft_putpointer.c
-#convert .c to .o
-OBJS = $(SRCS:%.c=%.o)
-
+LIBFT = ./libft
+#convert all .c to .o
+OBJS = $(wildcard*.c=.o)
+SRCS = ft_printf.o ft_putchar.c ft_puthexa.c ft_putnbr.c ft_putpointer.c ft_putstr.c
 all:$(NAME)
 
 $(NAME): $(OBJS)
-	$(MAKE) -C $(LIBFTDIR)
-	@echo "Libft OK"
-#	$(ARCH) $(NAME) $(OBJS)
+	$(MAKE) -C $(LIBFT)
+	@echo "\033[92mLibft OK\033[0m"
+	cp ./libft/libft.a $(NAME)
+	@echo "\033[92mcopy to libftprintf OK!\033[0m"
+	$(ARCH) $(NAME) $(SRCS)
 
 $(OBJS):
-	$(CC) $(CFLAGS) -c $(SRCS)
+	$(CC) $(CFLAGS) -C $(SRCS)
 
 clean:
-	$(MAKE) clean -c $(LIBFTDIR)
+	$(MAKE) clean -C $(LIBFT)
 	$(RM) $(OBJS)
 
 fclean: clean
-	$(MAKE) fclean -c $(LIBFTDIR)
+	$(MAKE) fclean -C $(LIBFT)
 	$(RM) $(NAME)
 
 re: fclean all
