@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	ft_hexa_base_pointer(unsigned long long int ptr)
+int	ft_hexa_base_pointer(uintptr_t ptr)
 {
 	char	*base16;
 	int		a;
@@ -23,7 +23,8 @@ int	ft_hexa_base_pointer(unsigned long long int ptr)
 	return (a);
 }
 
-int	ft_print_ptr(unsigned long long int ptr)
+
+int	ft_print_ptr(uintptr_t ptr)
 {
 	int	a;
 
@@ -40,7 +41,7 @@ int	ft_print_ptr(unsigned long long int ptr)
 	return (a);
 }
 
-int	ft_put_pointer(unsigned long long int ptr)
+int	ft_put_pointer(unsigned long long ptr)
 {
 	int	a;
 

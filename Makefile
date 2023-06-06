@@ -21,8 +21,8 @@ NAME = libftprintf.a
 #libft library
 LIBFT = ./libft
 #convert all .c to .o
-OBJS = $(wildcard*.c=.o)
-SRCS = ft_printf.o ft_putchar.c ft_puthexa.c ft_putnbr.c ft_putpointer.c ft_putstr.c
+OBJS = $(SRCS:.c=.o)
+SRCS = ft_printf.c ft_putchar.c ft_puthexa.c ft_putnbr.c ft_putpointer.c ft_putstr.c
 all:$(NAME)
 
 $(NAME): $(OBJS)
