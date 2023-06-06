@@ -31,9 +31,10 @@ $(NAME): $(OBJS)
 	cp ./libft/libft.a $(NAME)
 	@echo "\033[92mcopy to libftprintf OK!\033[0m"
 	$(ARCH) $(NAME) $(SRCS)
+	@echo "\033[92m $(NAME) OK!\033[0m"
 
 $(OBJS):
-	$(CC) $(CFLAGS) -C $(SRCS)
+	$(CC) $(CFLAGS) -c $(SRCS)
 
 clean:
 	$(MAKE) clean -C $(LIBFT)
