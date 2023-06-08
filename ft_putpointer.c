@@ -23,7 +23,6 @@ int	ft_hexa_base_pointer(uintptr_t ptr)
 	return (a);
 }
 
-
 int	ft_print_ptr(uintptr_t ptr)
 {
 	int	a;

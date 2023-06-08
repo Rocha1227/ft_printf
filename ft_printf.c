@@ -57,12 +57,3 @@ int	ft_printf(const char *str, ...)
 	va_end(arg_list);
 	return (a);
 }
-int main (){
-	int i = 15;
-
-	printf("%d\n\n", printf("%d\n", i));
-	printf("%d\n", ft_printf("%d\n", i));
-
-	
-	return (0);
-}
