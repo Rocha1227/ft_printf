@@ -6,7 +6,7 @@
 #    By: krocha <krocha@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/06/05 12:07:28 by krocha            #+#    #+#              #
-#    Updated: 2023/06/05 15:32:19 by krocha           ###   ########.fr        #
+#    Updated: 2023/06/09 20:18:47 by krocha           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,25 +23,34 @@ LIBFT = ./libft
 #convert all .c to .o
 OBJS = $(SRCS:.c=.o)
 SRCS = ft_printf.c ft_putchar.c ft_puthexa.c ft_putnbr.c ft_putpointer.c ft_putstr.c
+#Msg Color
+GRN = \033[92m
+RED = \033[0;31m
+DFT = \033[0m
+
 all:$(NAME)
 
 $(NAME): $(OBJS)
 	$(MAKE) -C ./libft
-	@echo "\033[92m Libft OK \033[0m"
+	@echo "$(GRN) Libft OK $(DFT)"
 	cp ./libft/libft.a $(NAME)
-	@echo "\033[92m copy to libftprintf OK! \033[0m"
+	@echo "$(GRN) copy to libftprintf OK! $(DFT)"
 	$(ARCH) $(NAME) $(OBJS)
-	@echo "\033[92m $(NAME) OK! \033[0m"
+	@echo "$(GRN) $(NAME) OK! $(DFT)"
 
 
 clean:
 	$(MAKE) clean -C ./libft
 	$(RM) $(OBJS)
-	@echo "\033[92m Clean OK \033[0m"
+	@echo "$(GRN) Clean OK $(DFT)"
 
 fclean: clean
 	$(MAKE) fclean -C ./libft
 	$(RM) $(NAME)
-	@echo "\033[92m Fclean OK \033[0m"
+	@echo "$(GRN) Fclean OK $(DFT)"
 	
 re: fclean all
+
+.PHONY: all name clean fclean
+
+.SILENT:
