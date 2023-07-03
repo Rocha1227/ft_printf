@@ -6,13 +6,13 @@
 /*   By: krocha <krocha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 14:26:28 by krocha            #+#    #+#             */
-/*   Updated: 2023/06/05 15:03:57 by krocha           ###   ########.fr       */
+/*   Updated: 2023/06/26 11:37:35 by krocha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_hexa_base_pointer(uintptr_t ptr)
+int	ft_hexa_base_pointer(unsigned long long ptr)
 {
 	char	*base16;
 	int		a;
@@ -23,7 +23,7 @@ int	ft_hexa_base_pointer(uintptr_t ptr)
 	return (a);
 }
 
-int	ft_print_ptr(uintptr_t ptr)
+int	ft_print_ptr(unsigned long long ptr)
 {
 	int	a;
 
@@ -46,7 +46,7 @@ int	ft_put_pointer(unsigned long long ptr)
 
 	if (!ptr)
 	{
-		ft_putstr("nill");
+		write (1, "(nil)", 5);
 		return (5);
 	}
 	a = 0;

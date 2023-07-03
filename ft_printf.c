@@ -6,7 +6,7 @@
 /*   By: krocha <krocha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 17:01:53 by krocha            #+#    #+#             */
-/*   Updated: 2023/06/05 14:59:40 by krocha           ###   ########.fr       */
+/*   Updated: 2023/06/26 12:18:47 by krocha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,13 @@ int	ft_printf(const char *str, ...)
 	}
 	va_end(arg_list);
 	return (a);
+}
+int main (){
+	int i = 15;
+
+	printf("%d\n\n", printf("%d\n", i));
+	printf("%d\n", ft_printf("%d\n", i));
+
+	
+	return (0);
 }

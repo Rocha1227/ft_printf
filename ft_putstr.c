@@ -6,22 +6,25 @@
 /*   By: krocha <krocha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/05 12:08:29 by krocha            #+#    #+#             */
-/*   Updated: 2023/06/05 12:25:14 by krocha           ###   ########.fr       */
+/*   Updated: 2023/06/26 11:35:00 by krocha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putstr(char *c)
+int	ft_putstr(char *str)
 {
 	int	i;
 
 	i = 0;
-	if (!c)
-		return (0);
-	while (c[i])
+	if (str == NULL)
 	{
-		write(1, &c, 1);
+		write(1, "(null)", 6);
+		return (6);
+	}
+	while (str[i] != '\0')
+	{
+		write(1, &str[i], 1);
 		i++;
 	}
 	return (i);
