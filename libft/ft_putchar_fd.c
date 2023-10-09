@@ -6,11 +6,11 @@
 /*   By: krocha <krocha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 12:53:06 by krocha            #+#    #+#             */
-/*   Updated: 2023/05/15 15:02:24 by krocha           ###   ########.fr       */
+/*   Updated: 2023/10/09 14:34:35 by krocha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

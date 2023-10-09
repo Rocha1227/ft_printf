@@ -6,7 +6,7 @@
 /*   By: krocha <krocha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 11:56:13 by krocha            #+#    #+#             */
-/*   Updated: 2023/05/19 13:26:48 by krocha           ###   ########.fr       */
+/*   Updated: 2023/10/09 14:34:06 by krocha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,4 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	dest[i] = '\0';
 	return (dest);
-}	
+}

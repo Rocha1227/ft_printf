@@ -6,16 +6,16 @@
 /*   By: krocha <krocha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 17:05:35 by krocha            #+#    #+#             */
-/*   Updated: 2023/06/26 11:25:11 by krocha           ###   ########.fr       */
+/*   Updated: 2023/10/09 14:40:42 by krocha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include	"libft/libft.h"
-# include	<stdarg.h>
-# include	<stdint.h>
+# include "libft/libft.h"
+# include <stdarg.h>
+# include <stdint.h>
 
 int		ft_putstr(char *str);
 int		ft_putnbr(int n);

@@ -6,7 +6,7 @@
 /*   By: krocha <krocha@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 12:33:02 by krocha            #+#    #+#             */
-/*   Updated: 2023/04/24 15:01:18 by krocha           ###   ########.fr       */
+/*   Updated: 2023/10/09 14:34:23 by krocha           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,4 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 		dest[i] = '\0';
 	}
 	return (src_i);
-}	
+}
